@@ -26,6 +26,9 @@ flask-error-handling/
 └── static/
     └── css/
         └── style.css              # CSS styles for all pages
+    └── images/
+        ├── 404.gif                 # 404 error image
+        └── 500.gif                 # 500 error image
 ```
 
 ## Installation and Setup
