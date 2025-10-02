@@ -55,19 +55,21 @@ def test_page():
 def not_found_error(error):
     """Custom 404 error handler"""
     app.logger.warning(f'404 error: {request.url}')
-    return render_template('errors/404.html'), 404
+    
+    # it is posible to render a template and return a status code other than 200
+    return render_template('errors/404.html'), 404 # 404 is the status code for not found errors
 
 @app.errorhandler(500)
 def internal_error(error):
     """Custom 500 error handler"""
     app.logger.error(f'Internal server error: {error}')
-    return render_template('errors/500.html'), 500
+    return render_template('errors/500.html'), 500 # 500 is the status code for internal server error
 
 @app.errorhandler(Exception)
 def handle_exception(error):
     """Handle any unhandled exceptions"""
     app.logger.error(f'Unhandled exception: {error}', exc_info=True)
-    return render_template('errors/500.html'), 500
+    return render_template('errors/500.html'), 500 # 500 is the status code for internal server error
 
 if __name__ == '__main__':
     set_up_logging()
