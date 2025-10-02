@@ -1,0 +1,16 @@
+{% extends "base.html" %}
+
+{% block title %}Test Page - Flask Error Handling Demo{% endblock %}
+
+{% block content %}
+<div class="content">
+    <h1>Test Page</h1>
+    <p>This page loaded successfully. The Flask application is working correctly.</p>
+    
+    <p>
+        <a href="{{ url_for('index') }}">Back to Home</a> | 
+        <a href="/nonexistent-page">Test 404 Error</a> | 
+        <a href="{{ url_for('trigger_500') }}">Test 500 Error</a>
+    </p>
+</div>
+{% endblock %}

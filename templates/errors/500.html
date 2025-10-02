@@ -1,0 +1,17 @@
+{% extends "base.html" %}
+
+{% block title %}500 - Internal Server Error{% endblock %}
+
+{% block content %}
+<div class="content">
+    <h1>500 - Internal Server Error</h1>
+    <img class="error-image" src="{{ url_for('static', filename='images/500.gif') }}" alt="500 Error">
+    <p>Something went wrong on the server. The error has been logged.</p>
+    <p class="note">If you take a look in the developer tools you should see that the HTTP status code is <em>500</em> for this request.</p>
+    <p>
+        <a href="{{ url_for('index') }}">Go Home</a> | 
+        <a href="javascript:location.reload()">Retry</a> | 
+        <a href="{{ url_for('test_page') }}">Test Page</a>
+    </p>
+</div>
+{% endblock %}

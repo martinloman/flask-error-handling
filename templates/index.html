@@ -1,0 +1,25 @@
+{% extends "base.html" %}
+
+{% block title %}Home - Flask Error Handling Demo{% endblock %}
+
+{% block content %}
+<div class="content">
+    <h1>Flask Error Handling Demo</h1>
+    <p>Demonstrating custom error pages and proper error handling in Flask applications</p>
+    
+    <h2>Test Links</h2>
+    <ul>
+        <li><a href="{{ url_for('test_page') }}">Working Page</a> - Normal page that works correctly</li>
+        <li><a href="/nonexistent-page">404 Error</a> - Page that doesn't exist</li>
+        <li><a href="{{ url_for('trigger_500') }}">500 Error</a> - Division by zero error</li>
+    </ul>
+    
+    <h2>What This Demo Shows</h2>
+    <ul>
+        <li>Custom error pages</li>
+        <li>Error logging and handling</li>
+        <li>Different HTTP error types (404, 500)</li>
+        <li>User-friendly error messages</li>
+    </ul>
+</div>
+{% endblock %}
