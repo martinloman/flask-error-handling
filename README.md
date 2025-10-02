@@ -4,12 +4,10 @@ A comprehensive Flask application demonstrating proper error handling with custo
 
 ## Features
 
-- **Custom 404 Page**: Beautiful "Page Not Found" error page with helpful navigation
-- **Custom 500 Page**: Professional "Internal Server Error" page with technical details
+- **Custom 404 Page**: "Page Not Found" error page with helpful navigation
+- **Custom 500 Page**: "Internal Server Error" page with technical details
 - **Error Logging**: Automatic logging of errors to file with rotation
 - **Test Routes**: Intentional error triggers for demonstration purposes
-- **Responsive Design**: Mobile-friendly error pages with modern styling
-- **Professional UI**: Clean, modern interface using Inter font and CSS Grid
 
 ## Project Structure
 
@@ -34,11 +32,6 @@ flask-error-handling/
 
 1. **Clone or download** this project to your local machine
 
-2. **Create a virtual environment** (recommended):
-   ```cmd
-   python -m venv venv
-   venv\Scripts\activate
-   ```
 
 3. **Install dependencies**:
    ```cmd
@@ -92,12 +85,6 @@ flask-error-handling/
 
 ## Customization
 
-### Styling
-The CSS in `static/css/style.css` uses CSS custom properties (variables) for easy theming:
-- `--primary-color`: Main brand color
-- `--danger-color`: Error/warning color
-- `--success-color`: Success message color
-
 ### Error Messages
 Edit the templates in `templates/errors/` to customize error messages and styling.
 
@@ -124,20 +111,3 @@ def trigger_db_error():
     # Simulate database connection error
     raise Exception("Database connection failed")
 ```
-
-## Security Considerations
-
-- Error pages don't expose sensitive information
-- Stack traces are logged but not shown to users
-- Debug mode should be disabled in production
-- Error logging helps with monitoring and debugging
-
-## Browser Compatibility
-
-- Modern browsers (Chrome, Firefox, Safari, Edge)
-- Responsive design for mobile devices
-- Graceful degradation for older browsers
-
-## License
-
-This is a demonstration project for educational purposes.
